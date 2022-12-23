@@ -24,7 +24,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # display the table on the page
 streamlit.dataframe(fruits_to_show)
 
-# New Section to display fruityvice api response
 # create the repeatable code block (called a function)
 def get_fruityvice_data(this_fruit_choice):
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
@@ -45,7 +44,6 @@ except URLError as e:
   streamlit.error()
     
 #import requests
-
 
 # take the json version of the response and normalize it
 
